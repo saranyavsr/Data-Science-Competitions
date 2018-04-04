@@ -25,4 +25,4 @@ Compared GBM and Randomforest are chosen as the meta learner and are cloned inte
 
 ###  Step 6 : Result
 
-Re-trained model on full training set, using ensemble and applied re-trained model to test set. The movie ratings predicted are then stored onto prediction5.dat, achieving rmse (50%) 1.0544 on Leaderboard.
+Re-trained model on full training set, using ensemble and applied re-trained model to test set. The movie ratings predicted are then stored onto predictions.dat, achieving rmse (50%) 1.0544 on Leaderboard.
