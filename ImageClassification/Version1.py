@@ -14,6 +14,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import Normalizer
 from sklearn.preprocessing import StandardScaler
+from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier, VotingClassifier, AdaBoostClassifier
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.linear_model import LinearRegression
@@ -27,13 +28,13 @@ from sklearn.metrics import confusion_matrix, classification_report
 
 pd.set_option('max_colwidth', 1000)
 
-trainrecord = pd.read_csv('/Users/whiplash/SJSU/Semester 2/CMPE 255/Assignments/Program 2/data/train.txt', 
+trainrecord = pd.read_csv('/train.txt', 
                           header=None, delimiter=' ')
 
-trainlabels = pd.read_csv('/Users/whiplash/SJSU/Semester 2/CMPE 255/Assignments/Program 2/data/train.labels', 
+trainlabels = pd.read_csv('/train.labels', 
                           header=None, names =['labels'])
 
-testrecord = pd.read_csv('/Users/whiplash/SJSU/Semester 2/CMPE 255/Assignments/Program 2/data/test.txt', 
+testrecord = pd.read_csv('/test.txt', 
                           header=None, delimiter=' ')
 
 
@@ -46,9 +47,6 @@ sns.countplot(x="labels", data=trainlabels)
 
 
 # In[3]:
-
-
-from xgboost import XGBClassifier
 
 target = []
 for x, value in np.ndenumerate(trainlabels):
@@ -67,14 +65,9 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 # In[6]:
 
-
-from scipy.stats import boxcox
-from scipy.stats import skew
-from scipy.stats import randint
-from scipy.stats import uniform
-
+import sklearn
 from xgboost import XGBRegressor
-
+from xgboost import XGBClassifier
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.linear_model import Lasso, ElasticNet, Ridge
 from sklearn.kernel_ridge import KernelRidge
@@ -83,12 +76,6 @@ from sklearn.feature_selection import RFECV
 from sklearn.preprocessing import StandardScaler, RobustScaler
 from sklearn.metrics import make_scorer 
 from sklearn.base import BaseEstimator, RegressorMixin
-
-# neural networks
-import keras
-from keras.models import Sequential
-from keras.layers import Dense
-from keras import regularizers
 
 # ignore Deprecation Warning
 import warnings
