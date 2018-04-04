@@ -21,7 +21,7 @@ To facilitate base learner comparison, ML-Ensemble implements a randomized grid 
 
 ###  Step 5 : Comparing meta learners
 
-Compared GBM and Randomforest are chosen as the meta learner and are cloned internally so to get the fitted ones. The ensemble will implement is the Super Learner, also known as a stacking ensemble. After instantiation, ensemble can be used like any other Scikit-learn estimator. Predictions are generated, achieving .887 rmse score.
+Upon comparing, GBM and Randomforest are chosen as the meta learner and are cloned internally so to get the fitted ones. The ensemble will implement is the Super Learner, also known as a stacking ensemble. After instantiation, ensemble can be used like any other Scikit-learn estimator. Predictions are generated, achieving .887 rmse score.
 
 ###  Step 6 : Result
 
