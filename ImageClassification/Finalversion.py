@@ -48,13 +48,13 @@ from imblearn.combine import SMOTETomek
 
 pd.set_option('max_colwidth', 1000)
 
-trainrecord = pd.read_csv('/Users/whiplash/SJSU/Semester 2/CMPE 255/Assignments/Program 2/data/train.txt', 
+trainrecord = pd.read_csv('/train.txt', 
                           header=None, delimiter=' ')
 
-trainlabels = pd.read_csv('/Users/whiplash/SJSU/Semester 2/CMPE 255/Assignments/Program 2/data/train.labels', 
+trainlabels = pd.read_csv('/train.labels', 
                           header=None, names =['labels'])
 
-testrecord = pd.read_csv('/Users/whiplash/SJSU/Semester 2/CMPE 255/Assignments/Program 2/data/test.txt', 
+testrecord = pd.read_csv('/test.txt', 
                           header=None, delimiter=' ')
 
 
