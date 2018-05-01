@@ -37,7 +37,7 @@ An image can be can be described by many different types of features. In the tra
 * test.dat: Test set (dense matrix, samples/images in lines, features in columns). 5296 records
 
 
-## Text-Clustering  (On-going Competition)
+## Text-Clustering 
 
 Implement the DBSCAN clustering algorithm. All objects in the training data set must be assigned to a cluster. Thus, you can either assign all noise points to cluster K+1 or apply post-processing after DBSCAN and assign noise points to the closest cluster.
 
